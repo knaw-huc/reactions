@@ -6,7 +6,7 @@ import * as packageJson from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [react(), dts({ insertTypesEntry: true })],
   build: {
     lib: {
       entry: path.resolve("src", "lib/index.ts"),
@@ -16,6 +16,11 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
     },
   },
 });
