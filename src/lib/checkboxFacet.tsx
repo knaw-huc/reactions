@@ -9,16 +9,24 @@ interface CheckboxFacetProps {
 
 const CheckboxFacet = (props: CheckboxFacetProps) => {
   return (
-    <div>
-      <label htmlFor={props.id}>{props.labelName}</label>
-      <input
-        type="checkbox"
-        id={props.id}
-        name={props.name}
-        value={props.value}
-        onChange={props.onChange}
-      />
-      <small>{`(${props.amount})`}</small>
+    <div className="searchFacet">
+      <div className="checkboxFacet">
+        <div className="checkboxFacetInput">
+          <input
+            type="checkbox"
+            id={props.id}
+            name={props.name}
+            value={props.value}
+            onChange={props.onChange}
+          />
+        </div>
+        <div className="checkboxFacetLabel">
+          <label htmlFor={props.id}>{props.labelName}</label>
+        </div>
+        <div className="searchFacetSmallText">
+          <small>{`(${props.amount})`}</small>
+        </div>
+      </div>
     </div>
   );
 };
