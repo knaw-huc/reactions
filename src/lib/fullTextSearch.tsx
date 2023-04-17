@@ -23,21 +23,19 @@ export default function FullTextFacet(props: FullTextFacetProps) {
   };
 
   return (
-    <div className="searchFacet">
-      <div className="hcFacetSearch">
-        <input
-          type="text"
-          name=""
-          id="freeText"
-          value={textField}
-          placeholder="Press ENTER to search"
-          onChange={handleChange}
-          onKeyUp={keyPressHandler}
-        />
-        <button type="button" name="button" onClick={buttonClickHandler}>
-          Search
-        </button>
-      </div>
+    <div className="hcFacetSearch">
+      <input
+        type="text"
+        name=""
+        id="freeText"
+        value={textField}
+        placeholder="Press ENTER to search"
+        onChange={handleChange}
+        onKeyUp={keyPressHandler}
+      />
+      <button type="button" name="button" onClick={buttonClickHandler}>
+        Search
+      </button>
     </div>
   );
 }
