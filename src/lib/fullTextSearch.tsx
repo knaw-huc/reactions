@@ -23,8 +23,7 @@ export default function FullTextFacet(props: FullTextFacetProps) {
   };
 
   return (
-    <div className="hcFacet">
-      <div className="hcFacetTitle">Text search</div>
+    <div className="searchFacet">
       <div className="hcFacetSearch">
         <input
           type="text"
