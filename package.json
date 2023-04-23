@@ -1,18 +1,17 @@
 {
-  "name": "reactions",
-  "private": true,
-  "version": "0.0.0",
+  "name": "reactions-knaw-huc",
+  "version": "0.0.2",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/reactions.umd.js",
-  "module": "./dist/reactions.es.js",
+  "main": "./dist/reactions-knaw-huc.umd.js",
+  "module": "./dist/reactions-knaw-huc.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/reactions.es.js",
-      "require": "./dist/reactions.umd.js"
+      "import": "./dist/reactions-knaw-huc.es.js",
+      "require": "./dist/reactions-knaw-huc.umd.js"
     }
   },
   "scripts": {

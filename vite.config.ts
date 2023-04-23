@@ -10,9 +10,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve("src", "lib/index.ts"),
-      name: "reactions",
+      name: "reactions-knaw-huc",
       formats: ["es", "umd"],
-      fileName: (format) => `reactions.${format}.js`,
+      fileName: (format) => `reactions-knaw-huc.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],
