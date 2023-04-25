@@ -10,16 +10,13 @@ export default function FullTextFacet(props: FullTextFacetProps) {
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     setTextField(event.currentTarget.value);
+    props.valueHandler(event.currentTarget.value);
   };
 
   const keyPressHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       props.valueHandler(event.currentTarget.value);
     }
-  };
-
-  const buttonClickHandler = () => {
-    props.valueHandler(textField);
   };
 
   return (
@@ -33,9 +30,6 @@ export default function FullTextFacet(props: FullTextFacetProps) {
         onChange={handleChange}
         onKeyUp={keyPressHandler}
       />
-      <button type="button" name="button" onClick={buttonClickHandler}>
-        Search
-      </button>
     </div>
   );
 }
