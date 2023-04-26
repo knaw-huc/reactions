@@ -3,6 +3,7 @@ import React from "react";
 
 interface FullTextFacetProps {
   valueHandler: (value: string) => void;
+  enterPressedHandler: (pressed: boolean) => void;
 }
 
 export default function FullTextFacet(props: FullTextFacetProps) {
@@ -10,9 +11,13 @@ export default function FullTextFacet(props: FullTextFacetProps) {
 
   const keyPressHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      setTextField(event.currentTarget.value);
-      props.valueHandler(event.currentTarget.value);
+      props.enterPressedHandler(true);
     }
+  };
+
+  const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
+    props.valueHandler(event.currentTarget.value);
+    setTextField(event.currentTarget.value);
   };
 
   return (
@@ -24,6 +29,7 @@ export default function FullTextFacet(props: FullTextFacetProps) {
         value={textField}
         placeholder="Press ENTER to search"
         onKeyUp={keyPressHandler}
+        onChange={handleChange}
       />
     </div>
   );
