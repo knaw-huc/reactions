@@ -33,6 +33,7 @@
     "vite-plugin-dts": "^2.1.0"
   },
   "dependencies": {
+    "react-aria-components": "^1.0.0-alpha.3",
     "react-calendar": "^4.2.1"
   }
 }
