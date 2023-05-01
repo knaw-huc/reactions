@@ -1,10 +1,9 @@
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { Value } from "react-calendar/dist/cjs/shared/types";
 
 interface DateFacetProps {
   className: string;
-  onChange: (newDate: Value) => void;
+  onChange: (newDate: Date | null | (Date | null)[]) => void;
   defaultActiveStartDate: Date;
   defaultValue: Date;
   minDate: Date;
