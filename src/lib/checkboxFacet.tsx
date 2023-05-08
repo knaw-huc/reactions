@@ -4,6 +4,7 @@ interface CheckboxFacetProps {
   value: string;
   labelName: string;
   amount: number;
+  checked: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -17,6 +18,7 @@ const CheckboxFacet = (props: CheckboxFacetProps) => {
           name={props.name}
           value={props.value}
           onChange={props.onChange}
+          checked={props.checked}
         />
       </div>
       <div className="checkboxFacetLabel">
